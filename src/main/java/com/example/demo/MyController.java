@@ -8,18 +8,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class MyController {
-
-
-
     @Autowired
-@Qualifier("myPrint")
     private Printer printer;
 
 
     @RequestMapping("/test")
-    public String test(){
+    public String test() {
 
         printer.print("Hello Word");
-        return  "Hello Word";
+        return "Hello Word";
     }
 }
